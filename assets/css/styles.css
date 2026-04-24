@@ -221,6 +221,7 @@ button, input, select, textarea{font:inherit}
 @media (max-width: 620px){
   .grid.three{grid-template-columns: 1fr}
   .grid.four{grid-template-columns: 1fr}
+  .btn{display: none;}
 }
 
 .card{
