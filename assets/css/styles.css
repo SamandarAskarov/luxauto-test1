@@ -42,10 +42,11 @@ button, input, select, textarea{font:inherit}
   display:flex;
   align-items:center;
   justify-content:space-between;
+  flex-wrap: nowrap;
   gap:16px;
 }
 .brand{
-  display:flex;
+  display:inline-flex;
   align-items:center;
   gap:12px;
   min-width: 180px;
@@ -166,6 +167,36 @@ button, input, select, textarea{font:inherit}
   .menu-panel a:hover{background: rgba(220,0,0,.06)}
 }
 
+@media (max-width: 620px){
+  .nav-inner{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .brand{
+    min-width: 0;
+    width: fit-content;
+    flex: 0 1 auto;
+    display: inline-flex;
+  }
+
+  .nav-right{
+    flex: 0 0 auto;
+    gap: 10px;
+  }
+
+  .btn{
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .lang{
+    padding: 5px 8px;
+  }
+}
+
 /* ---------------- Sections ---------------- */
 .section{padding:72px 0}
 .section.tight{padding:56px 0}
@@ -221,7 +252,6 @@ button, input, select, textarea{font:inherit}
 @media (max-width: 620px){
   .grid.three{grid-template-columns: 1fr}
   .grid.four{grid-template-columns: 1fr}
-  .brand-name{display:none}
 }
 
 .card{
